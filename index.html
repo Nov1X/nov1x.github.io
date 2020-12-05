@@ -1,52 +1,143 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>page-slider-js</title>
-    <script src="slider.js"></script>
-    <link rel="stylesheet" href="slider.css">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>page-slider-js</title>
+	<script src="slider.js"></script>
+	<link rel="stylesheet" href="slider.css">
 
-    <style>
-      #norwegian {
-        background: linear-gradient(225deg, #ffc27d, #ff8e93);
-      }
-      #french {
-        background: linear-gradient(#f3defc, #63a3e6);
-      }
-      #spanish {
-        background: linear-gradient(#d2fcad, #22eaeb);
-      }
-      #hindi{
-        background: linear-gradient(#f0bed4, #a163f5);
-      }
-      #mandarin {
-        background: linear-gradient(#65cce1, #6365ec);
-      }
+	<style>
+        #first {
+            background-image: url("img/rina.png");
+            background-position: center;
+            background-position-y: -900px;
+            box-shadow: inset 0 -50px 100px rgba(0, 0, 0, 0.5);
 
-      section > span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 7vw;
-        font-family: sans-serif;
-        text-transform: uppercase;
-        color: #fff;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="slides">
-      <section id="norwegian"><span>Hallo</span></section>
-      <section id="french"><span>Bonjour</span></section>
-      <section id="spanish"><span>Hola</span></section>
-      <section id="hindi"><span>Namaste</span></section>
-      <section id="mandarin"><span>你好</span></section>
-    </div>
+        }
 
-    <script>
-      var mySlider = slider('.slides');
-    </script>
-  </body>
+        #second {
+            background: linear-gradient(#f3defc, #63a3e6);
+        }
+
+        .inner {
+        }
+
+        #second.main {
+            position: absolute;
+            top: 30%;
+            left: 20%;
+            max-width: 40%;
+            margin-top: 70px;
+            margin-left: 55px;
+
+        }
+
+        #text-second {
+            position: absolute;
+            font-size: 6rem;
+
+        }
+
+        #second-img {
+	        max-width: 200px;
+	        max-height: 300px;
+	        margin-top: 100px;
+	        border-radius: 5px;
+	        box-shadow: 0 0 10px #ffffff;
+	        margin-left: 25%
+        }
+
+        #third {
+            background: linear-gradient(#d2fcad, #22eaeb);
+	        text-align: center;
+        }
+
+        #fourth {
+            background: url("img/rina2.jpg") no-repeat;
+	        background-size: 100%;
+        }
+
+        #fifth {
+	        background: url("img/together.JPG") center no-repeat;
+	        background-size: 100%;
+	        box-shadow: inset 0 0 50px #ffffff;
+        }
+
+        #sixth {
+            background: linear-gradient(#65cce1, #6365ec);
+        }
+
+        .main {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            font-size: 7vw;
+            font-family: sans-serif;
+            color: #fff;
+        }
+
+        .fifty {
+            top: 50%;
+            left: 50%;
+        }
+
+        .tritwo {
+	        top: 30%;
+	        left: 40%;
+        }
+
+        .up {
+            text-transform: uppercase;
+        }
+	</style>
+</head>
+<body>
+	<div class="slides">
+		<section id="first">
+			<span class="main fifty up">Rina + Andrew</span>
+		</section>
+
+		<section id="second">
+			<div class="inner">
+				<div class="main tritwo">
+					<h4>Bonjour!</h4>
+					<span>
+					Господи, это же страничка лучшей пары в мире!
+					Я считаю, когда-то эта страница станет самой популярной
+					во всём рунете. Ну почти, ВК выше. Мы же всё-таки
+					самые красивые!
+				</span>
+					<br>
+				</div>
+			</div>
+		</section>
+
+		<section id="third">
+			<p class="main fifty">Ладно, а щас чуть чуть фотак наших красотуль</p>
+		</section>
+
+		<section id="fourth">
+<!--			фото-->
+		</section>
+
+		<section id="fifth">
+<!--			фото-->
+		</section>
+
+		<section id="sixth">
+			<span class="main fifty">
+				Малышка. Знаешь что нельзя? Нельзя грустить (иногда можно всё-таки).
+				Поэтому если вдруг настроение внезапно
+				ухудшится, по любой причине, зайди сюда и вспомни что у тебя есть
+				мальчик, который всегда на твоей стороне, который всегда для поддержит и для
+				которого ты важнее чем вся его жизнь. У тебя всё получится моя родная,
+				ты сможешь абсолютно всё, я в тебя верю.
+			</span>
+		</section>
+	</div>
+
+	<script>
+        var mySlider = slider('.slides');
+	</script>
+</body>
 </html>
